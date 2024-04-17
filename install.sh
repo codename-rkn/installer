@@ -396,18 +396,16 @@ ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/data
 
 db="$HOME/.rkn/pro/db/production.sqlite3"
 
-rkn_edition=`$rkn_dir/bin/rkn_edition`
-
-  if [[ -f "$db" ]]; then
-      echo -n "   * Updating the DB..."
-      $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
-      handle_failure
-  else
-      echo -n "   * Setting up the DB..."
-      $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
-      handle_failure
-  fi
-  echo "done."
+if [[ -f "$db" ]]; then
+    echo -n "   * Updating the DB..."
+    $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+    handle_failure
+else
+    echo -n "   * Setting up the DB..."
+    $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+    handle_failure
+fi
+echo "done."
 
 echo
 echo
