@@ -17,9 +17,8 @@ bash -c "$(curl -sSL https://get.ecsypno.com/rkn)"
 
 You can now run Codename RKN by using the executables under the `bin/` directory.
 
-1. For a CLI scan you can run `bin/rkn URL`.
-2. You can use Codename RKN Pro by running `bin/rkn_pro`
-   1. Setting up PostgreSQL is recommended for production workloads.
+* You can use Codename RKN Pro by running `bin/rkn_pro`
+   * Setting up PostgreSQL is recommended for production workloads.
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
@@ -63,8 +62,6 @@ From the Codename RKN package directory:
    1. [Acquire a license activation key](https://ecsypno.com/)  -- if you haven't already done so for a previous release.
 
 You can now run Codename RKN by using the executables under the `bin/` directory.
-
-For a CLI scan you can run `bin/rkn URL`.
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
