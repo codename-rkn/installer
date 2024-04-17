@@ -369,7 +369,7 @@ echo "done."
 if ! [ -f $rkn_license_file ]; then
     echo
     echo "Codename RKN activation"
-    echo "(If you don't have a license key, get one from https://ecsypno.com -- free Community and Trial editions are available too.)"
+    echo "(If you don't have a license key, get one from https://ecsypno.com -- a free Trial edition is available too.)"
     key=""
     read -p "License key: " key
     $rkn_dir/bin/rkn_activate $key
@@ -398,18 +398,16 @@ db="$HOME/.rkn/pro/db/production.sqlite3"
 
 rkn_edition=`$rkn_dir/bin/rkn_edition`
 
-if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
-    if [[ -f "$db" ]]; then
-        echo -n "   * Updating the DB..."
-        $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
-        handle_failure
-    else
-        echo -n "   * Setting up the DB..."
-        $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
-        handle_failure
-    fi
-    echo "done."
-fi
+  if [[ -f "$db" ]]; then
+      echo -n "   * Updating the DB..."
+      $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+      handle_failure
+  else
+      echo -n "   * Setting up the DB..."
+      $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+      handle_failure
+  fi
+  echo "done."
 
 echo
 echo
