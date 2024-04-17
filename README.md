@@ -1,6 +1,6 @@
-# Codename SCNR Installer
+# Codename RKN Installer
 
-Installation instructions for [Codename SCNR](https://ecsypno.com/pages/codename-scnr) on Linux
+Installation instructions for [Codename RKN](https://ecsypno.com/pages/codename-rkn) on Linux
 x86 64bit.
 
 * [Automated installation](#automated-installation)
@@ -12,20 +12,20 @@ x86 64bit.
 To install run the following command in a terminal of your choice:
 
 ```bash
-bash -c "$(curl -sSL https://get.ecsypno.com/scnr)"
+bash -c "$(curl -sSL https://get.ecsypno.com/rkn)"
 ```
 
-You can now run Codename SCNR by using the executables under the `bin/` directory.
+You can now run Codename RKN by using the executables under the `bin/` directory.
 
-1. For a CLI scan you can run `bin/scnr URL`.
-2. You can use Codename SCNR Pro by running `bin/scnr_pro`
+1. For a CLI scan you can run `bin/rkn URL`.
+2. You can use Codename RKN Pro by running `bin/rkn_pro`
    1. Setting up PostgreSQL is recommended for production workloads.
 
-For more information please consult the [documentation](https://documentation.ecsypno.com/scnr/).
+For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
 ### PostgreSQL
 
-For a more reliable Codename SCNR Pro experience, it's best to configure it to use PostgreSQL.
+For a more reliable Codename RKN Pro experience, it's best to configure it to use PostgreSQL.
 
 Please exchange `secret` with a secure password in the role creation commands.
 
@@ -33,46 +33,46 @@ Please exchange `secret` with a secure password in the role creation commands.
 
 ```
 $ sudo -u postgres psql
-postgres=# CREATE USER "scnr-pro" WITH PASSWORD 'secret';
-postgres=# ALTER USER "scnr-pro" superuser;
+postgres=# CREATE USER "rkn-pro" WITH PASSWORD 'secret';
+postgres=# ALTER USER "rkn-pro" superuser;
 ```
 
 #### Connection
 
 ```
 # Backup SQLite config.
-mv ~/.scnr/pro/config/database.yml ~/.scnr/pro/config/database.yml.bak
+mv ~/.rkn/pro/config/database.yml ~/.rkn/pro/config/database.yml.bak
 
 # Set to use PostgreSQL config.
-cp ~/.scnr/pro/config/database.postgres.yml ~/.scnr/pro/config/database.yml
+cp ~/.rkn/pro/config/database.postgres.yml ~/.rkn/pro/config/database.yml
 ```
 
-Now edit `~/.scnr/pro/config/database.yml` to change the password from `secret`.
+Now edit `~/.rkn/pro/config/database.yml` to change the password from `secret`.
 
 #### Setup
 
-From the Codename SCNR package directory:
+From the Codename RKN package directory:
 
-    bin/scnr_pro_task db:create db:migrate db:seed
+    bin/rkn_pro_task db:create db:migrate db:seed
 
 ## Manual installation
 
-1. Download the [latest package](https://github.com/scnr/installer/releases).
+1. Download the [latest package](https://github.com/codename-rkn/installer/releases).
 2. Extract.
-3. Run `bin/scnr_activate KEY` to activate your installation -- if you haven't already done so for a previous release.
+3. Run `bin/rkn_activate KEY` to activate your installation -- if you haven't already done so for a previous release.
    1. [Acquire a license activation key](https://ecsypno.com/)  -- if you haven't already done so for a previous release.
 
-You can now run Codename SCNR by using the executables under the `bin/` directory.
+You can now run Codename RKN by using the executables under the `bin/` directory.
 
-For a CLI scan you can run `bin/scnr URL`.
+For a CLI scan you can run `bin/rkn URL`.
 
-For more information please consult the [documentation](https://documentation.ecsypno.com/scnr/).
+For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
-### Codename SCNR Pro (WebUI)
+### Codename RKN Pro (WebUI)
 
-You can run Codename SCNR Pro by running `bin/scnr_pro`.
+You can run Codename RKN Pro by running `bin/rkn_pro`.
 
-If you'd like to use the Codename SCNR WebUI, its database will need to be prepared.
+If you'd like to use the Codename RKN WebUI, its database will need to be prepared.
 
 Out of the box, the WebUI comes configured with [SQLite](https://sqlite.org/index.html), however,
 for better results and performance please switch to [PostgreSQL](https://www.postgresql.org/).
@@ -87,8 +87,8 @@ Please exchange `secret` with a secure password in the role creation commands.
 
 ```
 $ sudo -u postgres psql
-postgres=# CREATE USER "scnr-pro" WITH PASSWORD 'secret';
-postgres=# ALTER USER "scnr-pro" superuser;
+postgres=# CREATE USER "rkn-pro" WITH PASSWORD 'secret';
+postgres=# ALTER USER "rkn-pro" superuser;
 ```
 
 ###### Connection
@@ -97,25 +97,25 @@ From the package root directory:
 
 ```
 # Backup SQLite config.
-mv .system/scnr-ui-pro/config/database.yml .system/scnr-ui-pro/config/database.yml.bak
+mv .system/rkn-ui-pro/config/database.yml .system/rkn-ui-pro/config/database.yml.bak
 
 # Set to use PostgreSQL config.
-cp .system/scnr-ui-pro/config/database.postgres.yml .system/scnr-ui-pro/config/database.yml
+cp .system/rkn-ui-pro/config/database.postgres.yml .system/rkn-ui-pro/config/database.yml
 ```
 
-Now edit `.system/scnr-ui-pro/config/database.yml` to change the password from `secret`.
+Now edit `.system/rkn-ui-pro/config/database.yml` to change the password from `secret`.
 
 #### Setup
 
 If this is a fresh installation, you can setup a DB with:
 
-    ./bin/scnr_pro_task db:create db:migrate db:seed
+    ./bin/rkn_pro_task db:create db:migrate db:seed
 
 #### Update
 
 If you'd like to update an existing installation you can do it with:
 
-    ./bin/scnr_pro_task db:migrate
+    ./bin/rkn_pro_task db:migrate
 
 ## Dependencies for headless environments or WSL
 

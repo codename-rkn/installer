@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cat<<EOF
-                      Codename SCNR installer
+                      Codename RKN installer
 -------------------------------------------------------------------------
 
 EOF
@@ -38,15 +38,15 @@ version() {
 
 print_eula() {
     less --prompt="Hit SPACE to move to next page" --quit-at-eof <<EOF
-Codename SCNR Terms & Conditions of Supply
+Codename RKN Terms & Conditions of Supply
 
 IMPORTANT NOTICE: PLEASE READ THE FOLLOWING TERMS BEFORE ORDERING OR DOWNLOADING ANY SOFTWARE FROM THIS WEBSITE AS APPLICABLE TO THE LICENCE AND USE OF THAT SOFTWARE.
 
-These Codename SCNR Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which Ecsypno Single Member P.C. ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Codename SCNR ("Codename SCNR" or the "Software"), following acceptance of an order as detailed below.
+These Codename RKN Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which Ecsypno Single Member P.C. ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Codename RKN ("Codename RKN" or the "Software"), following acceptance of an order as detailed below.
 
 The following expressly form part of the Terms:
 
-- The Codename SCNR License Agreement;
+- The Codename RKN License Agreement;
 
 - The General Terms and Conditions;
 
@@ -56,31 +56,31 @@ The following expressly form part of the Terms:
 
 The Terms apply to the exclusion of any other terms that the Licensee seeks to impose or incorporate, or which are implied by trade, custom, practice or course of dealing.
 
-1. Licenses to Codename SCNR are available for purchase via the Licensor's website at https://ecsypno.com/products/scnr.
+1. Licenses to Codename RKN are available for purchase via the Licensor's website at https://ecsypno.com/products/rkn.
 
-2. Placing an order for Codename SCNR or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Ecsypno Single Member P.C..  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Codename SCNR terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Ecsypno Single Member P.C.'s order quotation.
+2. Placing an order for Codename RKN or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Ecsypno Single Member P.C..  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Codename RKN terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Ecsypno Single Member P.C.'s order quotation.
 
 3. Unless Ecsypno Single Member P.C. has pre-approved the Licensee's purchase on credit in writing (and subject to any additional credit terms that apply to any such approval), payment is required in advance. Shortly after the Licensee makes payment and the order has been accepted by Ecsypno Single Member P.C., the Licensee will receive an email containing instructions enabling the Licensee to log in and download the Licensee's software and licence key.  If the Licensee does not receive this email within 30 minutes of making payment, please email the Licensor, who will investigate the issue and endeavour to respond within one working day. In relation to purchases made on agreed credit terms, Ecsypno reserves the right to charge interest under the Late Payment of Commercial Debts (Interest) Act 1998 on invoiced amounts unpaid by their due date.
 
-4. If the Licensee's license is subject to auto-renewal and the Licensee has provided a valid recurring payment method, then payment will be taken 14 days before the expiry of the then current License Period (as defined in the Codename SCNR License Agreement) ("Renewal Payment Date"). Auto-renewal for specific licences can be disabled on the Licensee's account page.
+4. If the Licensee's license is subject to auto-renewal and the Licensee has provided a valid recurring payment method, then payment will be taken 14 days before the expiry of the then current License Period (as defined in the Codename RKN License Agreement) ("Renewal Payment Date"). Auto-renewal for specific licences can be disabled on the Licensee's account page.
 
 5. If the Licensee wishes to cancel its order, please email the Licensor, within 7 days of making payment or payment being taken for auto-renewal licenses, or if the order has been placed on credit, credit having been pre-approved by Ecsypno Single Member P.C., please email the Licensor within 7 days of placing the order, and in each case before the Licensee downloads the software or licence key.  If the Licensee already downloaded the software or licence key, it will not be possible to refund the order.
 
 6. If the Licensee's payment is subject to any tax liability within any jurisdiction (for example, withholding tax) then it bears sole responsibility for meeting this liability, and no deductions must be made in the amount paid to Ecsypno Single Member P.C..  Ecsypno Single Member P.C. does not accept liability for any tax liabilities that may arise from the Licensee's purchase of the Software or any associated services hereunder.
 
-7. When the contract for the purchase of Codename SCNR has been concluded, such contract is made for the benefit of the Licensee and Ecsypno Single Member P.C. only and is not intended to benefit, or be enforceable by, anyone else.
+7. When the contract for the purchase of Codename RKN has been concluded, such contract is made for the benefit of the Licensee and Ecsypno Single Member P.C. only and is not intended to benefit, or be enforceable by, anyone else.
 
 8. These Terms (including all the documents referred to in them) are governed by and construed in accordance with Greek Law and submitted to the exclusive jurisdiction of the Greek courts.
 
-Codename SCNR License Agreement
+Codename RKN License Agreement
 
 This licence agreement which incorporates the General Terms and Conditions below ("License") forms part of the Terms for the Software, which includes computer software, and the online documentation current at the date of the download of this License and accessible on https://documentation.ecsypno.net/ ("Documentation").
 
-THE DOCUMENTATION CONTAINS THE SYSTEM REQUIREMENTS TO RUN CODENAME SCNR.  INTERNET ACCESS IS REQUIRED DURING INSTALLATION TO ACTIVATE THE SOFTWARE.
+THE DOCUMENTATION CONTAINS THE SYSTEM REQUIREMENTS TO RUN CODENAME RKN.  INTERNET ACCESS IS REQUIRED DURING INSTALLATION TO ACTIVATE THE SOFTWARE.
 
-IF THE LICENSEE DOES NOT AGREE TO THE TERMS OF THE LICENCE AND THE CODENAME SCNR TERMS AND CONDITIONS OF SUPPLY, THE LICENSOR IS UNWILLING TO LICENSE THE SOFTWARE TO THE LICENSEE AND (1) THE LICENSEE MUST DISCONTINUE ANY ON-GOING ORDERING PROCESS NOW AND MUST NOT INSTALL THE SOFTWARE; AND/OR (2) WHERE THE SOFTWARE HAS ALREADY BEEN INSTALLED, THE LICENSEE MUST CEASE USING IT IMMEDIATELY.
+IF THE LICENSEE DOES NOT AGREE TO THE TERMS OF THE LICENCE AND THE CODENAME RKN TERMS AND CONDITIONS OF SUPPLY, THE LICENSOR IS UNWILLING TO LICENSE THE SOFTWARE TO THE LICENSEE AND (1) THE LICENSEE MUST DISCONTINUE ANY ON-GOING ORDERING PROCESS NOW AND MUST NOT INSTALL THE SOFTWARE; AND/OR (2) WHERE THE SOFTWARE HAS ALREADY BEEN INSTALLED, THE LICENSEE MUST CEASE USING IT IMMEDIATELY.
 
-WARNING: CODENAME SCNR IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE TO TARGET SYSTEMS DUE TO THE NATURE OF ITS FUNCTIONALITY.  TESTING FOR SECURITY FLAWS INHERENTLY INVOLVES INTERACTING WITH TARGETS IN NON-STANDARD WAYS WHICH CAN CAUSE PROBLEMS IN SOME VULNERABLE TARGETS.  THE LICENSEE MUST TAKE DUE CARE WHEN USING THE SOFTWARE, MUST READ ALL DOCUMENTATION BEFORE USE AND BACK UP TARGET SYSTEMS BEFORE USE.  WHERE THE LICENSEE USES THE SOFTWARE ON PRODUCTION SYSTEMS OR OTHER SYSTEMS, IT EXPRESSLY HEREBY ACCEPTS THE RISK OF DAMAGE AND RISK OF LOSS OF DATA OR LOSS OF USE IN RESPECT OF SUCH DATA AND SYSTEMS AND ACCEPTS THAT IT SHOULD NOT USE THE SOFTWARE ON ANY SYSTEMS FOR WHICH IT DOES NOT ACCEPT THE RISK OF DAMAGE, RISK OF LOSS OF DATA OR LOSS OF USE.
+WARNING: CODENAME RKN IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE TO TARGET SYSTEMS DUE TO THE NATURE OF ITS FUNCTIONALITY.  TESTING FOR SECURITY FLAWS INHERENTLY INVOLVES INTERACTING WITH TARGETS IN NON-STANDARD WAYS WHICH CAN CAUSE PROBLEMS IN SOME VULNERABLE TARGETS.  THE LICENSEE MUST TAKE DUE CARE WHEN USING THE SOFTWARE, MUST READ ALL DOCUMENTATION BEFORE USE AND BACK UP TARGET SYSTEMS BEFORE USE.  WHERE THE LICENSEE USES THE SOFTWARE ON PRODUCTION SYSTEMS OR OTHER SYSTEMS, IT EXPRESSLY HEREBY ACCEPTS THE RISK OF DAMAGE AND RISK OF LOSS OF DATA OR LOSS OF USE IN RESPECT OF SUCH DATA AND SYSTEMS AND ACCEPTS THAT IT SHOULD NOT USE THE SOFTWARE ON ANY SYSTEMS FOR WHICH IT DOES NOT ACCEPT THE RISK OF DAMAGE, RISK OF LOSS OF DATA OR LOSS OF USE.
 
 1. GRANT AND SCOPE OF LICENCE
 
@@ -88,7 +88,7 @@ WARNING: CODENAME SCNR IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE 
 
 1.2. If the License is subject to auto-renewal, a new License Period will commence on the expiry of the previous License Period, subject to successful payment being taken on the Renewal Payment Date. Each subsequent License Period commenced using the auto-renew process will be for the same duration as the previous License Period , unless the Licensor has agreed otherwise with the Licensee in writing.
 
-1.3. Each installation of Codename SCNR on an individual computer needs to be activated before it will operate, including subsequent Licenses commenced using auto-renewal. It is recognised that in the course of ordinary usage of the Software, individual users may need to install the product on more than one computer. The number of activations performed for each licence is monitored. The Licensor reserves the right to limit the number of activations allowed per licence, and to prevent further activations if this limit is exceeded.
+1.3. Each installation of Codename RKN on an individual computer needs to be activated before it will operate, including subsequent Licenses commenced using auto-renewal. It is recognised that in the course of ordinary usage of the Software, individual users may need to install the product on more than one computer. The number of activations performed for each licence is monitored. The Licensor reserves the right to limit the number of activations allowed per licence, and to prevent further activations if this limit is exceeded.
 
 1.4. The Licensee may:
 
@@ -332,7 +332,7 @@ under_maintenance() {
 #under_maintenance
 
 reserved="
-    scnr
+    rkn
 "
 cwd="$(basename `pwd`)"
 
@@ -346,33 +346,33 @@ done
 
 print_eula
 
-latest_version=`curl -sL https://raw.githubusercontent.com/scnr/version/main/LATEST`
-scnr_url="https://github.com/scnr/installer/releases/download/v$latest_version/scnr-v$latest_version-$(operating_system)-$(architecture).tar.gz"
-scnr_dir="./scnr-v$latest_version"
-scnr_package="./scnr-v$latest_version.tar.gz"
-scnr_db_config="$scnr_dir/.system/scnr-ui-pro/config/database.yml"
-scnr_license_file="$HOME/.scnr/license.key"
-log=./scnr.install.log
+latest_version=`curl -sL https://raw.githubusercontent.com/codename-rkn/version/main/LATEST`
+rkn_url="https://github.com/rkn/installer/releases/download/v$latest_version/codename-rkn-v$latest_version-$(operating_system)-$(architecture).tar.gz"
+rkn_dir="./rkn-v$latest_version"
+rkn_package="./rkn-v$latest_version.tar.gz"
+rkn_db_config="$rkn_dir/.system/rkn-ui-pro/config/database.yml"
+rkn_license_file="$HOME/.rkn/license.key"
+log=./rkn.install.log
 
 echo
 
 echo "   * Downloading..."
-curl -L -C - --retry 12 --retry-delay 1 --retry-all-errors $scnr_url -o $scnr_package
+curl -L -C - --retry 12 --retry-delay 1 --retry-all-errors $rkn_url -o $rkn_package
 handle_failure
 
 echo -n "   * Installing..."
-tar xf $scnr_package
+tar xf $rkn_package
 handle_failure
-rm $scnr_package
+rm $rkn_package
 echo "done."
 
-if ! [ -f $scnr_license_file ]; then
+if ! [ -f $rkn_license_file ]; then
     echo
-    echo "Codename SCNR activation"
+    echo "Codename RKN activation"
     echo "(If you don't have a license key, get one from https://ecsypno.com -- free Community and Trial editions are available too.)"
     key=""
     read -p "License key: " key
-    $scnr_dir/bin/scnr_activate $key
+    $rkn_dir/bin/rkn_activate $key
 
     if [[ $? != 0 ]]; then
         echo "Activation was unsuccessful, please retry the installation process with a valid license key."
@@ -382,30 +382,30 @@ if ! [ -f $scnr_license_file ]; then
     echo
 fi
 
-mkdir -p $HOME/.scnr/pro/config/
+mkdir -p $HOME/.rkn/pro/config/
 
-db_config="$HOME/.scnr/pro/config/database.yml"
+db_config="$HOME/.rkn/pro/config/database.yml"
 
 if [[ ! -f "$db_config" ]]; then
-    mv $scnr_dir/.system/scnr-ui-pro/config/database.yml $HOME/.scnr/pro/config/
-    mv $scnr_dir/.system/scnr-ui-pro/config/database.postgres.yml $HOME/.scnr/pro/config/
+    mv $rkn_dir/.system/rkn-ui-pro/config/database.yml $HOME/.rkn/pro/config/
+    mv $rkn_dir/.system/rkn-ui-pro/config/database.postgres.yml $HOME/.rkn/pro/config/
 fi
 
-rm -f $scnr_dir/.system/scnr-ui-pro/config/database.yml
-ln -s $HOME/.scnr/pro/config/database.yml $scnr_dir/.system/scnr-ui-pro/config/database.yml
+rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
+ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
 
-db="$HOME/.scnr/pro/db/production.sqlite3"
+db="$HOME/.rkn/pro/db/production.sqlite3"
 
-scnr_edition=`$scnr_dir/bin/scnr_edition`
+rkn_edition=`$rkn_dir/bin/rkn_edition`
 
-if [[ $scnr_edition == "dev" || $scnr_edition == "trial" || $scnr_edition == "pro" || $scnr_edition == "enterprise" ]]; then
+if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
     if [[ -f "$db" ]]; then
         echo -n "   * Updating the DB..."
-        $scnr_dir/bin/scnr_pro_task db:migrate 2>> $log 1>> $log
+        $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
         handle_failure
     else
         echo -n "   * Setting up the DB..."
-        $scnr_dir/bin/scnr_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+        $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
         handle_failure
     fi
     echo "done."
@@ -413,16 +413,12 @@ fi
 
 echo
 echo
-echo -n "Codename SCNR installed at:   "
-echo $scnr_dir
+echo -n "Codename RKN installed at:   "
+echo $rkn_dir
 echo "Installation log at: $log"
 echo
-echo "* For a CLI scan you can run: $scnr_dir/bin/scnr URL"
 
-if [[ $scnr_edition == "trial" || $scnr_edition == "pro" || $scnr_edition == "enterprise" ]]; then
-  echo "* To use Codename SCNR Pro you can run: $scnr_dir/bin/scnr_pro"
-fi
-
+echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
 echo
-echo "Documentation can be found at: https://documentation.ecsypno.com/scnr/"
+echo "Documentation can be found at: https://documentation.ecsypno.com/rkn/"
 echo
