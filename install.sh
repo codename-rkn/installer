@@ -415,7 +415,7 @@ echo "Installation log at: $log"
 echo
 
 echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
+echo "  * For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
 echo
 echo "Documentation can be found at: https://documentation.ecsypno.com/rkn/"
-echo "For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
 echo
