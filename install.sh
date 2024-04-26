@@ -366,6 +366,8 @@ handle_failure
 rm $rkn_package
 echo "done."
 
+mkdir -p $HOME/.rkn/pro/config/
+
 if ! [ -f $rkn_license_file ]; then
     echo
     echo "Codename RKN activation"
@@ -381,8 +383,6 @@ if ! [ -f $rkn_license_file ]; then
 
     echo
 fi
-
-mkdir -p $HOME/.rkn/pro/config/
 
 db_config="$HOME/.rkn/pro/config/database.yml"
 
