@@ -346,7 +346,7 @@ done
 
 print_eula
 
-latest_version=`curl -sL https://raw.githubusercontent.com/codename-rkn/version/main/LATEST`
+latest_version=`curl -sL https://raw.githubusercontent.com/codename-rkn/version/main/LATEST | tr -d "\r\n"`
 rkn_url="https://github.com/codename-rkn/installer/releases/download/v$latest_version/rkn-v$latest_version-$(operating_system)-$(architecture).tar.gz"
 rkn_dir="./rkn-v$latest_version"
 rkn_package="./rkn-v$latest_version.tar.gz"
