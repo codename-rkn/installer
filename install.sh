@@ -56,7 +56,7 @@ The following expressly form part of the Terms:
 
 The Terms apply to the exclusion of any other terms that the Licensee seeks to impose or incorporate, or which are implied by trade, custom, practice or course of dealing.
 
-1. Licenses to Codename RKN are available for purchase via the Licensor's website at https://ecsypno.com/products/rkn.
+1. Licenses to Codename RKN are available for purchase via the Licensor's website at https://ecsypno.com/products/codename-rkn.
 
 2. Placing an order for Codename RKN or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Ecsypno Single Member P.C..  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Codename RKN terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Ecsypno Single Member P.C.'s order quotation.
 
