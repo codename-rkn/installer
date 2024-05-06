@@ -396,16 +396,20 @@ ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/data
 
 db="$HOME/.rkn/pro/db/production.sqlite3"
 
-if [[ -f "$db" ]]; then
-    echo -n "   * Updating the DB..."
-    $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
-    handle_failure
-else
-    echo -n "   * Setting up the DB..."
-    $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
-    handle_failure
+rkn_edition=`$rkn_dir/bin/rkn_edition`
+
+if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
+  if [[ -f "$db" ]]; then
+      echo -n "   * Updating the DB..."
+      $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+      handle_failure
+  else
+      echo -n "   * Setting up the DB..."
+      $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+      handle_failure
+  fi
+  echo "done."
 fi
-echo "done."
 
 echo
 echo
@@ -413,6 +417,7 @@ echo -n "Codename RKN installed at:   "
 echo $rkn_dir
 echo "Installation log at: $log"
 echo
+echo "* For a CLI scan you can run: $rkn_dir/bin/rkn URL"
 
 echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
 echo "  * For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
