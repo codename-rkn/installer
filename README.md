@@ -16,13 +16,14 @@ Prerequisites:
 ```bash
 git clone https://github.com/codename-rkn/installer.git codename-rkn-installer
 cd codename-rkn-installer
-sudo docker compose up -d --build # Start the services.
-sudo docker exec -it codename-rkn-app-1 bash # Connect to the container.
+docker compose up -d --build # Start the services.
+docker exec -it codename-rkn-app-1 bash # Connect to the container.
 codename-rkn@a0f4d8c417bf:~$ ./install.sh # Install Codename RKN over the network.
 [...] # Snip
 codename-rkn@a0f4d8c417bf:~$ ls
 install.sh  rkn-v1.4.3.1  rkn.install.log # TADA!
 ```
+_In some Linux distributions, you may need to preface the `docker` commands with `sudo`._
 
 You can now run Codename RKN by using the executables under the `rkn-v*/bin` directory.
 
