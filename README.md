@@ -1,11 +1,34 @@
 # Codename RKN Installer
 
-Installation instructions for [Codename RKN](https://ecsypno.com/pages/codename-rkn) on Linux
-x86 64bit.
+Installation instructions for [Codename RKN](https://ecsypno.com/pages/codename-rkn):
 
-* [Automated installation](#automated-installation)
-* [Manual installation](#manual-installation)
+* [Docker installation](#docker-installation) -- for Mac OSX, Linux and MS Windows. _(recommended)_
+* [Automated installation](#automated-installation) -- For Linux.
+* [Manual installation](#manual-installation) -- For Linux.
 * [Dependencies for headless environments or WSL](#dependencies-for-headless-environments-or-wsl)
+
+## Docker installation
+
+Prerequisites:
+* [Docker](https://www.docker.com/)
+* [Docker Compose](https://docs.docker.com/compose/)
+
+```bash
+git clone https://github.com/codename-rkn/installer.git codename-rkn-installer
+cd codename-rkn-installer
+sudo docker compose up -d --build # Start the services.
+sudo docker exec -it codename-rkn-app-1 bash # Connect to the container.
+codename-rkn@a0f4d8c417bf:~$ ./install.sh # Install Codename RKN over the network.
+[...] # Snip
+codename-rkn@a0f4d8c417bf:~$ ls
+```
+
+You can now run Codename RKN by using the executables under the `rkn-v*/bin` directory.
+
+1. For a CLI scan you can run `bin/rkn URL`.
+2. You can use Codename RKN Pro by running `bin/rkn_pro`.
+
+For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
 ## Automated installation
 
