@@ -390,21 +390,42 @@ if ! [ -f $rkn_license_file ]; then
 fi
 
 db_config="$HOME/.rkn/pro/config/database.yml"
+if [[ "$1" == "docker" ]]; then
 
-if [[ ! -f "$db_config" ]]; then
-    mv $rkn_dir/.system/rkn-ui-pro/config/database.yml $HOME/.rkn/pro/config/
-    mv $rkn_dir/.system/rkn-ui-pro/config/database.postgres.yml $HOME/.rkn/pro/config/
+  if [[ ! -f "$db_config" ]]; then
+      mv $rkn_dir/.system/rkn-ui-pro/config/database.docker.yml $HOME/.rkn/pro/config/database.yml
+  fi
+
+  rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
+  ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
+
+  rkn_pro_user=`$rkn_dir/bin/rkn_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
+  if [[ "$rkn_pro_user" == "1" ]]; then
+      update=true
+  else
+      update=false
+  fi
+
+else
+
+  update=false
+  if [[ ! -f "$db_config" ]]; then
+      mv $rkn_dir/.system/rkn-ui-pro/config/database.yml $HOME/.rkn/pro/config/
+      mv $rkn_dir/.system/rkn-ui-pro/config/database.postgres.yml $HOME/.rkn/pro/config/
+  else
+      update=true
+  fi
+
+  rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
+  ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
+
 fi
 
-rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
-ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
-
-db="$HOME/.rkn/pro/db/production.sqlite3"
 
 rkn_edition=`$rkn_dir/bin/rkn_edition`
 
 if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
-  if [[ -f "$db" ]]; then
+  if [ "$update" = true ]; then
       echo -n "   * Updating the DB..."
       $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
       handle_failure

@@ -1,0 +1,27 @@
+name: codename-rkn
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+    image: ecsypno/codename-rkn
+    working_dir: /home/codename-rkn
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:  
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+    ports:
+      - 9292:9292 # Pro WebUI.
+  db:
+    image: postgres
+    restart: always
+    environment:
+      PGUSER: root
+      POSTGRES_DB: rkn_pro_production
+      POSTGRES_USER: rkn-pro
+      POSTGRES_PASSWORD: secret
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "rkn_pro_production", "-U", "rkn-pro" ]
+      interval: 1s
+      timeout: 5s
+      retries: 10
