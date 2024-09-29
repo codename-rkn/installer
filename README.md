@@ -16,8 +16,10 @@ Prerequisites:
 ```bash
 git clone https://github.com/codename-rkn/installer.git codename-rkn-installer
 cd codename-rkn-installer
+
 docker compose up -d --build # Start the services.
 docker exec -it codename-rkn-app-1 bash # Connect to the container.
+
 codename-rkn@a0f4d8c417bf:~$ ./install.sh # Install Codename RKN over the network.
 [...] # Snip
 codename-rkn@a0f4d8c417bf:~$ ls
