@@ -20,10 +20,8 @@ cd codename-rkn-installer
 docker compose up -d --build # Start the services.
 docker exec -it codename-rkn-app-1 bash # Connect to the container.
 
-codename-rkn@a0f4d8c417bf:~$ ./install.sh # Install Codename RKN over the network.
-[...] # Snip
-codename-rkn@a0f4d8c417bf:~$ ls
-install.sh  rkn-v1.4.3.1  rkn.install.log # TADA!
+# From within the container:
+./install.sh # Install Codename RKN over the network.
 ```
 _In some Linux distributions, you may need to preface the `docker` commands with `sudo`._
 
