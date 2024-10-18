@@ -10,7 +10,6 @@ Installation instructions for [Codename RKN](https://ecsypno.com/pages/codename-
 ## Docker installation
 
 Prerequisites:
-* [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
