@@ -47,7 +47,7 @@ data, including the license.
 To install run the following command in a terminal of your choice:
 
 ```bash
-bash -c "$(curl -sSL https://raw.githubusercontent.com/codename-rkn/installer/refs/heads/main/install.sh)"
+bash -c "$(curl -sSL https://get.ecsypno.com/rkn)"
 ```
 
 You can now run Codename RKN by using the executables under the `bin/` directory.
