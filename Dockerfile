@@ -10,7 +10,7 @@ WORKDIR /home/codename-rkn
 
 RUN mkdir .rkn
 RUN echo '#!/usr/bin/env bash' > ./setup.sh
-RUN echo 'bash -c "$(curl -sSL https://raw.githubusercontent.com/codename-rkn/installer/refs/heads/main/install.sh)" _ docker' >> ./setup.sh
+RUN echo 'bash -c "$(curl -sSL https://get.ecsypno.com/rkn)" _ docker' >> ./setup.sh
 RUN chmod +x ./setup.sh
 
 USER root
