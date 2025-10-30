@@ -10,7 +10,6 @@ Installation instructions for [Codename RKN](https://ecsypno.com/pages/codename-
 ## Docker installation
 
 Prerequisites:
-* [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
@@ -48,7 +47,7 @@ data, including the license.
 To install run the following command in a terminal of your choice:
 
 ```bash
-bash -c "$(curl -sSL https://get.ecsypno.com/rkn)"
+bash -c "$(curl -sSL https://raw.githubusercontent.com/codename-rkn/installer/refs/heads/main/install.sh)"
 ```
 
 You can now run Codename RKN by using the executables under the `bin/` directory.
