@@ -406,11 +406,11 @@ fi
 
 if [ "$update" = true ]; then
     echo -n "   * Updating the DB..."
-    $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+    INSTALLING=true $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
     handle_failure
 else
     echo -n "   * Setting up the DB..."
-    $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+    INSTALLING=true $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
     handle_failure
 fi
 echo "done."
