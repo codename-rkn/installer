@@ -404,8 +404,6 @@ else
 
 fi
 
-rkn_edition=`$rkn_dir/bin/rkn_edition`
-
 if [ "$update" = true ]; then
     echo -n "   * Updating the DB..."
     $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
