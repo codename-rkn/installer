@@ -17,6 +17,8 @@ git clone https://github.com/codename-rkn/installer.git codename-rkn-installer
 cd codename-rkn-installer
 
 docker-compose up -d --build # Start the services.
+# "docker compose" without the dash is also supported.
+
 docker exec -it codename-rkn-app-1 bash # Connect to the container.
 
 # From within the container:
