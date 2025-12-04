@@ -382,7 +382,7 @@ if [[ "$1" == "docker" ]]; then
   rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
   ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
 
-  rkn_pro_user=`$rkn_dir/bin/rkn_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
+  INSTALLING=true rkn_pro_user=`$rkn_dir/bin/rkn_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
   if [[ "$rkn_pro_user" == "1" ]]; then
       update=true
   else
