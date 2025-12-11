@@ -95,8 +95,7 @@ From the Codename RKN package directory:
 
 1. Download the [latest package](https://github.com/codename-rkn/installer/releases).
 2. Extract.
-3. Run `bin/rkn_activate KEY` to activate your installation -- if you haven't already done so for a previous release.
-   1. [Acquire a license activation key](https://ecsypno.com/)  -- if you haven't already done so for a previous release.
+
 
 You can now run Codename RKN by using the executables under the `bin/` directory.
 
