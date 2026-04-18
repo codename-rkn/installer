@@ -350,12 +350,14 @@ for i in $reserved; do
 done
 
 print_eula
+export INSTALLING=true
 
 latest_version=`curl -sL https://raw.githubusercontent.com/codename-rkn/version/main/LATEST | tr -d "\r\n"`
 rkn_url="https://github.com/codename-rkn/installer/releases/download/v$latest_version/rkn-v$latest_version-$(operating_system)-$(architecture).tar.gz"
 rkn_dir="./rkn-v$latest_version"
 rkn_package="./rkn-v$latest_version.tar.gz"
 rkn_db_config="$rkn_dir/.system/rkn-ui-pro/config/database.yml"
+rkn_license_file="$HOME/.rkn/license.key"
 log=./rkn.install.log
 
 echo
@@ -372,6 +374,22 @@ echo "done."
 
 mkdir -p $HOME/.rkn/pro/config/
 
+if ! [ -f $rkn_license_file ]; then
+    echo
+    echo "Codename RKN activation"
+    echo "(If you don't have a license key, get one from https://ecsypno.com -- a free Trial edition is available too.)"
+    key=""
+    read -p "License key: " key
+    $rkn_dir/bin/rkn_activate $key
+
+    if [[ $? != 0 ]]; then
+        echo "Activation was unsuccessful, please retry the installation process with a valid license key."
+        exit 1
+    fi
+
+    echo
+fi
+
 db_config="$HOME/.rkn/pro/config/database.yml"
 if [[ "$1" == "docker" ]]; then
 
@@ -382,8 +400,7 @@ if [[ "$1" == "docker" ]]; then
   rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
   ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
 
-  export INSTALLING=true \
-    rkn_pro_user=`$rkn_dir/bin/rkn_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
+  rkn_pro_user=`$rkn_dir/bin/rkn_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
   if [[ "$rkn_pro_user" == "1" ]]; then
       update=true
   else
@@ -405,13 +422,28 @@ else
 
 fi
 
+
+rkn_edition=`$rkn_dir/bin/rkn_edition`
+
+if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
+  if [ "$update" = true ]; then
+      echo -n "   * Updating the DB..."
+      $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+      handle_failure
+  else
+      echo -n "   * Setting up the DB..."
+      $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+      handle_failure
+  fi
+  echo "done."
+fi
 if [ "$update" = true ]; then
     echo -n "   * Updating the DB..."
-    INSTALLING=true $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+    $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
     handle_failure
 else
     echo -n "   * Setting up the DB..."
-    INSTALLING=true $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+    $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
     handle_failure
 fi
 echo "done."
@@ -423,8 +455,14 @@ echo $rkn_dir
 echo "Installation log at: $log"
 echo
 echo "* For a CLI scan you can run: $rkn_dir/bin/rkn URL"
+
+if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
+  echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
 echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
 
+  if [[ "$1" != "docker" ]]; then
+    echo "  * For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
+  fi
 if [[ "$1" != "docker" ]]; then
   echo "  * For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
 fi
