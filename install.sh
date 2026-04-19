@@ -350,7 +350,6 @@ for i in $reserved; do
 done
 
 print_eula
-export INSTALLING=true
 
 latest_version=`curl -sL https://raw.githubusercontent.com/codename-rkn/version/main/LATEST | tr -d "\r\n"`
 rkn_url="https://github.com/codename-rkn/installer/releases/download/v$latest_version/rkn-v$latest_version-$(operating_system)-$(architecture).tar.gz"
@@ -448,13 +447,10 @@ echo "* For a CLI scan you can run: $rkn_dir/bin/rkn URL"
 
 if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
   echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
-echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
 
   if [[ "$1" != "docker" ]]; then
     echo "  * For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
   fi
-if [[ "$1" != "docker" ]]; then
-  echo "  * For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
 fi
 
 echo
